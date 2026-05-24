@@ -20,7 +20,7 @@
 
 - **Python 3** ≥ 3.8
 - **Node.js** ≥ 16
-- **mermaid-cli**（mmdc）— 无需手动安装，脚本会自动检测并安装
+- **mermaid-cli**（mmdc）— [GitHub](https://github.com/mermaid-js/mermaid-cli)，无需手动安装，脚本会自动检测并安装
 
 ### 获取
 
