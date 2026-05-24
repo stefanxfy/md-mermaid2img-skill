@@ -28,13 +28,43 @@
 git clone git@github.com:stefanxfy/md-mermaid2img-skill.git
 ```
 
+### 安装到 Agent
+
+本 Skill 支持 OpenClaw、Claude Code 等 AI Agent 框架，安装后可直接用自然语言调用，无需手动执行命令。
+
+**OpenClaw：**
+
+将 Skill 目录复制到 OpenClaw skills 目录即可：
+
+```bash
+cp -r md-mermaid2img-skill ~/.qclaw/skills/md-mermaid2img-skill
+```
+
+安装后重启 Gateway，Agent 会自动识别。使用时直接说：
+
+> 帮我把 article.md 里的 mermaid 图转成图片
+
+**Claude Code：**
+
+将 Skill 目录放到项目或全局的 `.claude/skills/` 下，Claude Code 会自动加载 SKILL.md。使用时直接说：
+
+> 把这个 md 文件里的 mermaid 转为图片
+
 ## 使用方法
 
-### 基本用法
+### 基本用法（命令行）
 
 ```bash
 python3 scripts/convert.py /path/to/article.md
 ```
+
+### 基本用法（Agent 自然语言）
+
+安装到 Agent 后，直接用自然语言描述需求即可：
+
+> 帮我把 `/path/to/article.md` 里的 mermaid 图转成图片
+
+Agent 会自动调用 convert.py 完成转换，你不需要执行任何命令。
 
 执行后会在输入文件同目录生成 `<basename>_mermaid/` 文件夹：
 
